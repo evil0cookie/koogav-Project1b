@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		27E460E51E41C245007E7B63 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E460E41E41C245007E7B63 /* main.cpp */; };
+		27E460F21E41C901007E7B63 /* code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E460F01E41C901007E7B63 /* code.cpp */; };
+		27E460F51E41CA47007E7B63 /* response.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E460F31E41CA47007E7B63 /* response.cpp */; };
+		27E460F81E41CD67007E7B63 /* mastermind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E460F61E41CD67007E7B63 /* mastermind.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		27E460E11E41C245007E7B63 /* koogav-Poject1b */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "koogav-Poject1b"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E460E41E41C245007E7B63 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		27E460EF1E41C901007E7B63 /* code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code.h; sourceTree = "<group>"; };
+		27E460F01E41C901007E7B63 /* code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code.cpp; sourceTree = "<group>"; };
+		27E460F11E41C901007E7B63 /* d_random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = d_random.h; sourceTree = "<group>"; };
+		27E460F31E41CA47007E7B63 /* response.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = response.cpp; sourceTree = "<group>"; };
+		27E460F41E41CA47007E7B63 /* response.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = response.h; sourceTree = "<group>"; };
+		27E460F61E41CD67007E7B63 /* mastermind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mastermind.cpp; sourceTree = "<group>"; };
+		27E460F71E41CD67007E7B63 /* mastermind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mastermind.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,14 @@
 		27E460E31E41C245007E7B63 /* koogav-Poject1b */ = {
 			isa = PBXGroup;
 			children = (
+				27E460EF1E41C901007E7B63 /* code.h */,
+				27E460F01E41C901007E7B63 /* code.cpp */,
+				27E460F11E41C901007E7B63 /* d_random.h */,
 				27E460E41E41C245007E7B63 /* main.cpp */,
+				27E460F31E41CA47007E7B63 /* response.cpp */,
+				27E460F41E41CA47007E7B63 /* response.h */,
+				27E460F61E41CD67007E7B63 /* mastermind.cpp */,
+				27E460F71E41CD67007E7B63 /* mastermind.h */,
 			);
 			path = "koogav-Poject1b";
 			sourceTree = "<group>";
@@ -120,7 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E460F51E41CA47007E7B63 /* response.cpp in Sources */,
+				27E460F21E41C901007E7B63 /* code.cpp in Sources */,
 				27E460E51E41C245007E7B63 /* main.cpp in Sources */,
+				27E460F81E41CD67007E7B63 /* mastermind.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

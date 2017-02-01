@@ -1,15 +1,23 @@
+// EECE 2560
+// Project 1
+// Jacky Ko, Patricia Gavelek
 //
-//  main.cpp
-//  koogav-Poject1b
-//
-//  Created by Patricia Gavelek on 2/1/17.
-//  Copyright © 2017 Patricia Gavelek. All rights reserved.
+// Main program for Project 1 Part a. The code is for a Mastermind game where users must guess numbers of a secret code.
+// Initializes secret code from specified code length and an exclusive upper bound range.
+// Hint is generated based on user input for guess code.
 //
 
 #include <iostream>
+#include "code.h"
+#include "mastermind.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+using namespace std;
+
+int main()
+{
+
+    mastermind m = mastermind();
+    cout << "x";
+    m.playGame();
+   // system("pause");
+};
