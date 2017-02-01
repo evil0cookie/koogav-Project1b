@@ -50,7 +50,8 @@ ostream& operator<< (ostream& ostr, const response& r)
 {
 
     // output the response
-    ostr  << r.getcorrect() << ',' << r.getincorrect();
+    ostr  << "# Correct: " << r.getcorrect() << '\n';
+    ostr << "# Incorrect location: " << r.getincorrect() << '\n';
     
     return ostr;
 };

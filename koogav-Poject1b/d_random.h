@@ -76,7 +76,7 @@ long randomNumber::random(long n)
 {
 	double fraction = double(random()) / double(M);
 
-	return int(fraction * n);
+	return abs(int (fraction * n) % n);
 }
 
 double randomNumber::frandom()
