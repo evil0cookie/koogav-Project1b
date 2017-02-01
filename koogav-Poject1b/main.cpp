@@ -17,7 +17,6 @@ int main()
 {
 
     mastermind m = mastermind();
-    cout << "x";
     m.playGame();
    // system("pause");
 };
