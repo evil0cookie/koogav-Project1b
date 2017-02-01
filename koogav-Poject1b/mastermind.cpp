@@ -52,13 +52,28 @@ bool mastermind::isSolved(response r){
 
 //
 void mastermind::playGame(){
+    response r = response();
+    int count = 1;
+    
     cout << "Secret code is:";
     printSecret();
-    response r = response();
-    while (!isSolved(r)) {
+    
+    while (!isSolved(r) && count != 11) {
+        cout << "Turn # " << count << '\n';
+        
         code guess = humanGuess();
         r = getResponse(guess, secret);
+        
         cout << r;
+        count++;
     }
-    cout << "You won!";
+    if (isSolved(r))
+    {
+        cout << "You won!\n";
+    }
+    else
+    {
+        cout << "You Lose\n";
+    }
+ 
 };
