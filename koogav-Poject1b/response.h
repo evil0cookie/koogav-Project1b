@@ -1,9 +1,11 @@
+// EECE 2560 
+// Project 1
+// Jacky Ko, Patricia Gavelek
 //
-//  response.hpp
-//  koogav-Poject1b
+// response.h
 //
-//  Created by Patricia Gavelek on 2/1/17.
-//  Copyright © 2017 Patricia Gavelek. All rights reserved.
+// Header file for Project 1. 
+// Contains the declaration for the "response" class that stores the response to the guess.
 //
 
 #ifndef response_h
@@ -13,28 +15,26 @@
 #include <iostream>
 using namespace std;
 
-
-
 class response
 {
 public:
     //  Constructor
     response();
     
-    //
+    //	Functions to get or set stored values in response
     void setcorrect(int n);
     void setincorrect(int n);
     int getcorrect() const;
     int getincorrect() const;
     
-   
-    
 private:
-    int correct, incorrect;		//
-};
+    int correct, incorrect;		// Data members that contain "hint" values.
+};								// End of response class.
 
-//global overloaded operators
+// Global overloaded operators
 bool operator== (const response& lhs, const response& rhs);
 ostream& operator<< (ostream& ostr, const response& r);
 
-#endif /* response_h */
+#endif 
+
+// End of header file

@@ -1,43 +1,46 @@
+// EECE 2560 
+// Project 1
+// Jacky Ko, Patricia Gavelek
 //
-//  mastermind.cpp
-//  koogav-Poject1b
+// mastermind.cpp
 //
-//  Created by Patricia Gavelek on 2/1/17.
-//  Copyright © 2017 Patricia Gavelek. All rights reserved.
+// The file contains the implementation of the "mastermind" class that initiates the game in the main program and controls the high level game operations.
 //
 
 #include "mastermind.h"
 
-// constructor sets secret code parameters to default values
+
 mastermind::mastermind()
+// Constructor sets secret code parameters to default values of length 5 and range [0,10).
 {
     secret = code(5, 10);
     secret.generateCode();
     
 };
 
-// constructor sets secret code parameters to input values
-mastermind::mastermind(int n, int m){
+mastermind::mastermind(int n, int m)
+// Constructor sets secret code parameters to input values of length and range.
+{
     secret = code(n, m);
     secret.generateCode();
 };
 
-//  print the secret code
 void mastermind::printSecret()
+//  Prints the secret code.
 {
     secret.showCode();
 };
 
-// reads a code from the keyboard
 code mastermind::humanGuess()
+// Reads a code from the keyboard.
 {
     code guess = code(secret.getLength(), secret.getRange());
     guess.inputCode();
     return guess;
 };
 
-// returns how many numbers of the guess code are correct in the right place, and correct in the wrong place
 response mastermind::getResponse(code guess, code sec)
+// Returns how many numbers of the guess code are correct in the right place, and correct in the wrong place.
 {
     response r = response();
     r.setcorrect(sec.checkCorrect(guess));
@@ -45,35 +48,37 @@ response mastermind::getResponse(code guess, code sec)
     return r;
 };
 
-// returns if the secret code has been guessed
-bool mastermind::isSolved(response r){
+bool mastermind::isSolved(response r)
+// Returns if the secret code has been guessed.
+{
     return r == getResponse(secret, secret);
 };
 
 //
-void mastermind::playGame(){
+void mastermind::playGame()
+// Initiates Mastermind game.
+{
     response r = response();
     int count = 1;
     
     cout << "Secret code is:";
-    printSecret();
+    printSecret();								// Prints secret code for checking.
     
-    while (!isSolved(r) && count != 11) {
+    while (!isSolved(r) && count != 11) {		// Checks solution and does not allow for more than 10 guesses.
         cout << "Turn # " << count << '\n';
         
-        code guess = humanGuess();
-        r = getResponse(guess, secret);
+        code guess = humanGuess();				// User input of guess.
+        r = getResponse(guess, secret);			// Creates "hint" response.
         
         cout << r;
         count++;
     }
-    if (isSolved(r))
+    if (isSolved(r))							// Win condition.
     {
         cout << "You won!\n";
     }
-    else
+    else										// Lose condition.
     {
         cout << "You Lose\n";
     }
- 
 };

@@ -1,8 +1,11 @@
+// EECE 2560 
+// Project 1
+// Jacky Ko, Patricia Gavelek
 //
-//  mastermind.hpp
-//  koogav-Poject1b
+// mastermind.h
 //
-//  Created by Patricia Gavelek on 2/1/17.
+// Header file for Project 1. 
+// Contains the declaration for the "mastermind" class that initiates the game in the main program and controls the high level game operations.
 //
 
 #ifndef mastermind_h
@@ -11,6 +14,7 @@
 #include <stdio.h>
 #include "code.h"
 #include "response.h"
+
 class mastermind
 {
 public:
@@ -25,9 +29,10 @@ public:
     bool isSolved(response r);
     void playGame();
 
-    
 private:
-    code secret;		// Si
-};								// End of code class
+    code secret;		// Secret code data member.
+};						// End of mastermind class.
 
-#endif /* mastermind_h */
+#endif 
+
+// End of header file

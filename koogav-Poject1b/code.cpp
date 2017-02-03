@@ -2,7 +2,10 @@
 // Project 1
 // Jacky Ko, Patricia Gavelek
 //
+// code.cpp
+//
 // The file contains the implmentation of the functions in the "code" class defined in "code.h".
+// The "code" class is used to create the secret code and the guess code objects.
 //
 
 #include "code.h"
@@ -40,7 +43,10 @@ void code::showCode()
 void code::generateCode()
 // Generating the code using the provided random number generator class.
 {
-	randomNumber rndInt;
+	randomNumber seedGens;
+	int seed = abs(seedGens.random());				// Randomly generates seed and sets positive seed to prevent negative errors from system clock.
+	cout << seed;
+	randomNumber rndInt(seed);						// Uses seed to generate numbers.
 
 	for (int i = 0; i < codeNumbers.size(); i++)	// Cycles throught the vector to populate each cell with a random integer.
 	{
@@ -167,14 +173,14 @@ int code::checkIncorrect(const code &guess)
 };
 
 
-// returns length
 int code::getLength() const
+// Returns code length.
 {
     return codeLength;
 };
 
-//returns range
 int code::getRange() const
+// Returns code range.
 {
     return range;
 };
